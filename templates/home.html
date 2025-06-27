@@ -1,0 +1,188 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'base.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="all">
+                  <nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a  class="navbar-brand " href="#">Zengary</a>
+            <a class="navbar-brand" href="{% url 'log'%}">log in</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 style="color: aliceblue;" class="offcanvas-title" id="offcanvasDarkNavbarLabel">Zengary</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'log'%}">log in</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              product pages
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="{% url 'food'%}">food page</a></li>
+              <li><a class="dropdown-item" href="{% url 'chef'%}">chef page </a></li>
+              <li>
+                
+              </li>
+              <li><a class="dropdown-item" href="{% url 'about'%}"">About page</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+<br><br><br>
+<div class="header">
+    <div class="text">
+    <h1>Zengary</h1>
+    <h5>Restaurant to eat the best food <br>and to taste  it.</h5>   
+</div>
+    <img class="img" src="{% static '580b57fcd9996e24bc43c55c.png'%}" alt="">
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+<div class="center">
+    <div class="card">
+    </div>
+    <h5 class="h5">We are number one in the Middle East and <br>we are distinguished by quality and speed.</h5>
+</div><br><br><br><br><br><br><br><br><br>
+<div class="after">
+   <a class="image"  href="{% url 'food' %}"> <img src="{% static 'R.jpg' %}" alt=""></a>
+  <a class="image" href="{% url 'chef' %}"><img src="{% static 'R (1).jpg' %}" alt=""></a>
+    <a class="image" href="{% url 'about' %}"><img src="{% static 'OIP.jpg' %}" alt=""></a>
+</div><br><br><br><br><br><br><br>
+  <div class="footer">
+            <div class="row">
+                <div class="col-2">
+                    <h3>Zengary</h3>
+<p>Lorem ipsum dolor sit amet, <br/>consectetur adipisicing elit<br/>. Ratione animi eius .</p>
+<div class="phone"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-plus" viewBox="0 0 16 16">
+  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+  <path fill-rule="evenodd" d="M12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5"/>
+</svg> <h6>+0127 5104 037</h6></div>
+                </div>
+                <div class="col-2">
+                    <h3>Quick links</h3>
+                    <div class="links">
+                    <ul>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Service</a></li>
+                        <li><a href="">Booking</a></li>
+                        <li><a href="">faq,s</a></li>
+                        <li><a href="">Blogs</a></li>
+                        <li><a href="">out team</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="col-2">                    <h3>pages</h3>
+                    <div class="links">
+                    <ul>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Service</a></li>
+                        <li><a href="">Booking</a></li>
+                        <li><a href="">faq,s</a></li>
+                        <li><a href="">Blogs</a></li>
+                        <li><a href="">out team</a></li>
+                    </ul>
+                    </div></div>
+                <div class="col-1">         
+                               <h3>Quick links</h3>
+                    <div class="links">
+                    <ul>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Service</a></li>
+                        <li><a href="">Booking</a></li>
+                        <li><a href="">faq,s</a></li>
+                        <li><a href="">Blogs</a></li>
+                       
+                    </ul>
+                    </div></div>
+            </div>
+        </div>
+
+</div>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    // تفعيل ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".img", {
+      scrollTrigger: {
+        trigger: ".img",  
+      start: "top 10%",         // لما يوصل الكارد لقرب الشاشة
+        scrub: true,      
+      },
+      y: 750,
+      x:-800,
+      rotation: 360,
+      duration: 7
+    });
+
+    gsap.from(".h5", {
+      scrollTrigger: {
+        trigger: ".h5",  
+      start: "top 80%",         // لما يوصل الكارد لقرب الشاشة
+        scrub: true,      
+      },
+      opacity:0,
+      duration: 3,
+    });
+        gsap.from(".card", {
+      scrollTrigger: {
+        trigger: ".card",  
+      start: "top 80%",         // لما يوصل الكارد لقرب الشاشة
+        scrub: true,      
+      },
+      opacity:0,
+      duration: 3,
+    });
+        gsap.to(".text", {
+      scrollTrigger: {
+        trigger: ".text",  
+      start: "top 30%",         // لما يوصل الكارد لقرب الشاشة
+        scrub: true,      
+      },
+      opacity:0,
+      duration: 3,
+    });
+
+        gsap.from(".after", {
+      scrollTrigger: {
+        trigger: ".after",  
+      start: "top 100%",         // لما يوصل الكارد لقرب الشاشة
+        scrub: true,
+     
+      },
+      opacity:0,
+      duration:3,
+    });
+        
+  </script> 
+    <!-- Bootstrap JS + Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
