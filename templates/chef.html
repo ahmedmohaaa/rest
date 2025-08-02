@@ -78,7 +78,7 @@
 
     <div class="card alldish dish{{dish.category}}">
     {% if dish.img %}
-      <img src="{{dish.img.url}}" class="card-img-top" style="width: 449px; height: 300px; object-fit:cover" alt="...">
+          <img src="{{dish.img.url}}" style="height: 250px; width: 100%; object-fit:cover;"  class="card-img-top img-fluid custom-img" alt="...">
       {% else %}
       <img src="{% static 'R.jpg' %}" class="card-img-top" alt="...">
    {% endif %}
