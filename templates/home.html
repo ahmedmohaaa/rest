@@ -127,20 +127,32 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
-    // تفعيل ScrollTrigger
-    gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(".img", {
-      scrollTrigger: {
-        trigger: ".img",  
-      start: "top 10%",         // لما يوصل الكارد لقرب الشاشة
-        scrub: true,      
-      },
-      y: 750,
-      x:-800,
-      rotation: 360,
-      duration: 7
-    });
+  const screenWidth = window.innerWidth;
+
+  // مثال: تعديل حركة الصورة حسب حجم الشاشة
+  let imgAnimationProps = {
+    scrollTrigger: {
+      trigger: ".img",
+      start: "top 10%",
+      scrub: true
+    },
+    y: 750,
+    x: -700,
+    rotation: 360,
+    duration: 7
+  };
+
+  if (screenWidth < 768) {
+    // على الشاشات الصغيرة
+    imgAnimationProps.y = 300;
+    imgAnimationProps.x = 100;
+    imgAnimationProps.rotation = 360;
+    imgAnimationProps.duration = 3;
+  }
+
+  gsap.to(".img", imgAnimationProps);
 
     gsap.from(".h5", {
       scrollTrigger: {

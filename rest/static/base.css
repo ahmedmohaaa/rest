@@ -56,66 +56,43 @@ body{
 .after img:hover{
     scale: 1.2;
 }
+
+css
+نسخ
+تحرير
 .footer {
   background-color: #dfd7cd;
   padding: 2rem 1rem;
   display: flex;
- 
   justify-content: space-around;
   align-items: flex-start;
+  flex-wrap: wrap; /* ✅ إضافة مهمة للمرونة */
+  gap: 20px;
+  text-align: left;
 }
 
-.col-2 , .col-1 {
-  
-  margin: 20px 50px;
-  
-}
-.col-2 , .col-1 {
-  
-  margin: 20px 50px;
-  
+.col-1, .col-2 {
+  flex: 1 1 250px;
+  margin: 20px;
 }
 
-.phone {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  background-color: orange;
-  border-radius: 6px;
-  width: 80%;
-  margin: 10px auto;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  cursor: pointer;
+.col-1 ul, .col-2 ul {
+  padding: 0;
+  list-style: none;
 }
 
-.phone:hover {
-  transform: scale(1.1);
-  background-color: rgb(156, 114, 35);
-  color: white;
-}
-
-.col-2 a,.col-1 a {
-  text-decoration: none;
-  color: black;
-  display: block;
+.col-1 li, .col-2 li {
   margin-bottom: 8px;
+}
+
+.col-1 a, .col-2 a {
+  text-decoration: none;
+  color: #161649;
   transition: color 0.3s ease;
 }
 
-.col-2 a:hover,.col-1 a:hover {
+.col-1 a:hover, .col-2 a:hover {
   color: rgb(116, 116, 199);
-}
-
-.col-2 ul,.col-1 ul  {
-  padding: 0;
-}
-
-.col-2 li,.col-1 li {
-  list-style: none;
-}
-.footer a{
-    color: #161649;
 }
 
 .food .up {
@@ -234,3 +211,77 @@ svg{
         .payaple img{
             width: 80%;
         }
+/* الشاشات الصغيرة (موبايل) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .header .img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .all .center,
+    .food .center,
+    .center2,
+    .log {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .all .center .card,
+    .food .center img,
+    .center2 img {
+        width: 90% !important;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .col-1, .col-2 {
+        margin: 10px 0;
+    }
+
+    .form input {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .payaple input,
+    .payaple button,
+    .payaple img {
+        width: 100%;
+    }
+
+    .center .btns {
+        padding: 0;
+    }
+
+    .after img {
+        margin: 20px 0;
+    }
+}
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+}@media (max-width: 768px) {
+    .food .up::after {
+        height: 100px;
+    }
+}
