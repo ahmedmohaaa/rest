@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://remarkable-peace-production-986e.up.railway.app"
+]
+
 
 # Application definition
 
